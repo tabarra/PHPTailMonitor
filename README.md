@@ -41,7 +41,7 @@ Consider enhancing the security by adding two factor authentication.
 
 #### Inspired In & Thanks To:
 [deizel / tail.php](https://gist.github.com/deizel/3846335) - Chris Burke  
-[ThomasDepole/Easy-PHP-Tail-](https://github.com/ThomasDepole/Easy-PHP-Tail-) - Thomas Depole
+[ThomasDepole/Easy-PHP-Tail-](https://github.com/ThomasDepole/Easy-PHP-Tail-) - Thomas Depole  
 [php-tail](https://github.com/taktos/php-tail) - Toshio Takiguchi
 
 ## License
