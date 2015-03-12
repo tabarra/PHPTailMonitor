@@ -1,6 +1,19 @@
 <?php
 include 'config.php';
 
+function procData($data){
+	/*
+	explode \n
+	foreach line
+		line = procLine(trim(line));
+	return implode
+	*/
+}
+
+function parseLine($data){
+	#
+}
+
 if (isset($_GET['reset'])){
    unset($_SESSION['offset']);
    exit;

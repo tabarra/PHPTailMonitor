@@ -2,9 +2,8 @@
 A very humble, __lightweight__ GUI way to monitor your access.log. With ajax, password and fseek() to just get the new lines of the file.
 
 #### Features:
-* PHP fseek/append. Will not re-print the entire file every time the ajax refresh the content
-* File deletion detection
-* Truncated file detection
+* PHP fseek+append. Will not re-print the entire file every time the ajax refresh the content
+* File Deleted/Truncated detection
 * AutoScroll
 * Control buttons (AutoScroll, Start/Stop, clear)
 * Password protection (no DB)
