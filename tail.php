@@ -1,13 +1,19 @@
 <?php
-$filename = 'access.log';
-//session_start();session_destroy();die;
+$filename = 'test/access.log';
+
+
+if (isset($_GET['reset'])){
+   session_start();
+   session_destroy();
+   die;
+}
 
 if (isset($_GET['ajax'])) {
 	session_start();
 
 	if(!file_exists($filename)) {
 		if(empty($_SESSION['error'])){
-			echo "erro\r\n";
+			echo "<span id=\"hlR\">File not found - $filename</span><br>\r\n";
 			$_SESSION['error'] = 1;
 		}
 		die;
@@ -20,7 +26,7 @@ if (isset($_GET['ajax'])) {
 
 	if(isset($_SESSION['offset'])){
 		if($_SESSION['offset'] > $fsize){
-			echo "truncado\r\n";
+            echo "<span id=\"hlY\">File Truncated - $filename</span><br>\r\n";
 			$_SESSION['offset'] = 0;
 		}
 		if($_SESSION['offset'] < $fsize) {
@@ -29,7 +35,7 @@ if (isset($_GET['ajax'])) {
 			$_SESSION['offset'] = ftell($handle);
 		}
 	}else{
-        echo "Starting - $filename<br>";
+        echo "<span id=\"hlG\">Starting - $filename</span><br>\r\n";
 		fseek($handle, 0, SEEK_END);
 		$_SESSION['offset'] = ftell($handle);
 	}
@@ -40,60 +46,22 @@ if (isset($_GET['ajax'])) {
 <!doctype html>
 <html lang="en">
 <head>
-	<title>Log</title>
-	<style>
-		@import url(http://fonts.googleapis.com/css?family=Ubuntu);
-		body{
-			background-color: black;
-			color: white;
-			font-family: 'Ubuntu', sans-serif;
-			font-size: 16px;
-			line-height: 20px;
-            width: 100%;
-		}
-		#tailLog {
-			position: relative;
-			padding-top: 34px;
-		}
-		#scrollLock{
-			width:2px;
-			height: 2px;
-			overflow:visible;
-		}
-        .header {
-            width: 100%;
-            position: fixed;
-            top: 0;
-            bottom: auto;
-            background-color: #ccc;
-        }
-        #hl {
-            background: rgba(255,230,0,0.5);
-            border-radius: 3px;
-        }
-	</style>
-  <meta charset="UTF-8">
-  <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-  <script src="http://creativecouple.github.com/jquery-timing/jquery-timing.min.js"></script>
-  <script>
-  $(function() {
-    $.repeat(1000, function() {
-      $.get('tail.php?ajax', function(data) {
-        $('#tailLog').append(data);
-        $(window).scrollTop($('#scrollLock').offset().top);
-        stickIt();
-      });
-    });
-  });
-
-
-
-  </script>
+    <title>PHPTailMonitor</title>
+    <meta charset="UTF-8">
+    <link href="res/style.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="res/jquery-timing.min.js"></script>
 </head>
 <body>
-    <div class="header">Header2</div>
+    <div class="menu">
+        <h3>PHPTailMonitor</h3>
+        <button id="AutoScroll">Disable AutoScroll</button>
+        <button id="disable">Stop</button>
+        <button id="Clear">Clear Log</button>
+    </div>
 
-	<div id="tailLog"><span id="hl">text here</span></div>
+	<div id="tailLog"></div>
 	<div id="scrollLock"></div>
+    <script src="res/functions.js"></script>
 </body>
 </html>

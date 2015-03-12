@@ -6,6 +6,7 @@ A very humble, __lightweight__ GUI way to monitor your access.log. With ajax, pa
 * File deletion detection
 * Truncated file detection
 * Autoscroll
+* Control buttons (AutoScroll, Start/Stop, clear)
 
 
 #### Install and Use:
@@ -13,13 +14,12 @@ Simply copy the files to your webserver and then edit the config.php to your pas
 
 
 #### TODOs:
-- [ ] Enable/Disable button for autoscroll
-- [ ] Enable/Disable button for the refresh
-- [ ] On-the-fly interval change
 - [ ] Password protection (no DB)
 - [ ] Simple keyword-based, json configured, line highlight
+- [ ] Statistics
 - [ ] Support for 2GB+ files
 - [ ] Support multiple files
+- [ ] Support multiple instances (session bug)
 - [ ] Support filters
 - [ ] Light/Dark Theme
 - [ ] Smart filters for common requests (like images and etc.)
