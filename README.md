@@ -9,7 +9,7 @@ A very humble, __lightweight__ GUI way to monitor your access.log. With ajax, pa
 
 
 #### Install and Use:
-Simply copy the files to your webserver and then edit the config.php to your password and path to your access.log  
+Simply copy the files to your webserver and then edit the config.php to your password and path to your access.log.  
 
 
 #### TODOs:
@@ -20,12 +20,20 @@ Simply copy the files to your webserver and then edit the config.php to your pas
 - [ ] Simple keyword-based, json configured, line highlight
 - [ ] Support for 2GB+ files
 - [ ] Support multiple files
+- [ ] Support filters
+- [ ] Light/Dark Theme
+- [ ] Smart filters for common requests (like images and etc.)
 - [ ] Possibly email report for keywords found?
 - [ ] Possibly parsing for the log?
 
 
 #### Known Issues:
 For log files bigger than 2GB will cause problems with *filesize()*, *fseek()*, *ftell()*, and possibly other php functions.
+
+
+#### Security:
+PHPTailMonitor can be used to monitor logs for security purposes. The sessions save path is separated from the default one.  
+Consider enhancing the security by adding two factor authentication.
 
 ## Author
 
@@ -34,6 +42,7 @@ For log files bigger than 2GB will cause problems with *filesize()*, *fseek()*, 
 #### Inspired In & Thanks To:
 [deizel / tail.php](https://gist.github.com/deizel/3846335) - Chris Burke  
 [ThomasDepole/Easy-PHP-Tail-](https://github.com/ThomasDepole/Easy-PHP-Tail-) - Thomas Depole
+[php-tail](https://github.com/taktos/php-tail) - Toshio Takiguchi
 
 ## License
 
