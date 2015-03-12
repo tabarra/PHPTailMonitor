@@ -1,18 +1,18 @@
 # PHPTailMonitor
 A very humble, __lightweight__ GUI way to monitor your access.log. With ajax, password and fseek() to just get the new lines of the file.
 
-###### Features:
+#### Features:
 * PHP fseek/append. Will not re-print the entire file every time the ajax refresh the content
 * File deletion detection
 * Truncated file detection
 * Autoscroll
 
 
-###### Install and Use:
+#### Install and Use:
 Simply copy the files to your webserver and then edit the config.php to your password and path to your access.log  
 
 
-###### TODOs:
+#### TODOs:
 - [ ] Enable/Disable button for autoscroll
 - [ ] Enable/Disable button for the refresh
 - [ ] On-the-fly interval change
@@ -24,14 +24,14 @@ Simply copy the files to your webserver and then edit the config.php to your pas
 - [ ] Possibly parsing for the log?
 
 
-###### Known Issues:
+#### Known Issues:
 For log files bigger than 2GB will cause problems with *filesize()*, *fseek()*, *ftell()*, and possibly other php functions.
 
 ## Author
 
 [VexGuard](http://www.vexguard.com) - André Tabarra
 
-###### Inspired In & Thanks To:
+#### Inspired In & Thanks To:
 [deizel / tail.php](https://gist.github.com/deizel/3846335) - Chris Burke  
 [ThomasDepole/Easy-PHP-Tail-](https://github.com/ThomasDepole/Easy-PHP-Tail-) - Thomas Depole
 
