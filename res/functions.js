@@ -2,7 +2,7 @@ var AutoScroll = true;
 var doStop = false;
 
 $(function() {
-	$.get('tail.php?reset');
+	$.get('ajax.php?reset');
     $.repeat(1000, function() {
         doTail();
     });
@@ -10,7 +10,7 @@ $(function() {
 
 function doTail(){
     if(!doStop){
-        $.get('tail.php?ajax', function(data) {
+        $.get('ajax.php?ajax', function(data) {
             $('#tailLog').append(data);
             if(AutoScroll && data.length){
                 $(window).scrollTop($('#scrollLock').offset().top);
@@ -28,6 +28,7 @@ $('#AutoScroll').click(function() {
     } else {
         $this.text('Disable AutoScroll');
         AutoScroll = true;
+        $(window).scrollTop($('#scrollLock').offset().top);
     }
 });
 
@@ -37,7 +38,7 @@ $('#disable').click(function() {
     if ($this.hasClass('doDisable')) {
         $this.text('Start');
         doStop = true;
-        $.get('tail.php?reset');
+        $.get('ajax.php?reset');
     } else {
         $this.text('Stop');
         doStop = false;

@@ -5,8 +5,9 @@ A very humble, __lightweight__ GUI way to monitor your access.log. With ajax, pa
 * PHP fseek/append. Will not re-print the entire file every time the ajax refresh the content
 * File deletion detection
 * Truncated file detection
-* Autoscroll
+* AutoScroll
 * Control buttons (AutoScroll, Start/Stop, clear)
+* Password protection (no DB)
 
 
 #### Install and Use:
@@ -14,12 +15,11 @@ Simply copy the files to your webserver and then edit the config.php to your pas
 
 
 #### TODOs:
-- [ ] Password protection (no DB)
+- [ ] Filter out self-caused access log
 - [ ] Simple keyword-based, json configured, line highlight
 - [ ] Statistics
 - [ ] Support for 2GB+ files
 - [ ] Support multiple files
-- [ ] Support multiple instances (session bug)
 - [ ] Support filters
 - [ ] Light/Dark Theme
 - [ ] Smart filters for common requests (like images and etc.)
@@ -31,9 +31,6 @@ Simply copy the files to your webserver and then edit the config.php to your pas
 For log files bigger than 2GB will cause problems with *filesize()*, *fseek()*, *ftell()*, and possibly other php functions.
 
 
-#### Security:
-PHPTailMonitor can be used to monitor logs for security purposes. The sessions save path is separated from the default one.  
-Consider enhancing the security by adding two factor authentication.
 
 ## Author
 
