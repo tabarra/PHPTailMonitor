@@ -1,6 +1,15 @@
 <?php
 include 'config.php';
 
+$logData = <<<EOT
+aaa111uuu
+bbb222vvv
+ccc333www
+ddd444xxx
+eee555yyy
+fff666zzz
+EOT;
+
 function procData($data){
 	/*
 	explode \n
@@ -13,6 +22,28 @@ function procData($data){
 function parseLine($data){
 	#
 }
+
+$json = (file_exists($ffpath) && is_readable($ffpath))
+	?json_decode(file_get_contents($ffpath), true)
+	: null;
+
+var_dump($json);
+
+
+
+
+echo procData($logData);
+die;
+
+
+
+
+
+
+
+
+
+
 
 if (isset($_GET['reset'])){
    unset($_SESSION['offset']);

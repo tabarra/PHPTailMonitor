@@ -1,0 +1,14 @@
+{
+  "filterOut": [
+    "HEAD",
+    "OPTIONS"
+  ],
+  "filterIn": [
+    "/blog",
+    "/buy"
+  ],
+  "highlight":[
+    ["red", true, "GET"],
+    ["blue", false, "POST"]
+  ]
+}
