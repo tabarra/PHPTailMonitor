@@ -1,5 +1,5 @@
 # PHPTailMonitor
-A very humble, __lightweight__ GUI way to monitor your access.log. With ajax, password and fseek() to just get the new lines of the file.
+A very humble, __lightweight__ PHP GUI way to monitor your access.log. With ajax and fseek() to just get the new lines of the file.
 
 #### Features:
 * PHP fseek+append. Will not re-print the entire file every time the ajax refresh the content
@@ -7,6 +7,9 @@ A very humble, __lightweight__ GUI way to monitor your access.log. With ajax, pa
 * AutoScroll
 * Control buttons (AutoScroll, Start/Stop, clear)
 * Password protection (no DB)
+* Simple keyword-based, json configured, line highlight
+* Simple keyword-based, json configured, log filter
+* Ignore self-caused log
 
 
 #### Install and Use:
@@ -14,12 +17,9 @@ Simply copy the files to your webserver and then edit the config.php to your pas
 
 
 #### TODOs:
-- [ ] Filter out self-caused access log
-- [ ] Simple keyword-based, json configured, line highlight
 - [ ] Statistics
 - [ ] Support for 2GB+ files
 - [ ] Support multiple files
-- [ ] Support filters
 - [ ] Light/Dark Theme
 - [ ] Smart filters for common requests (like images and etc.)
 - [ ] Possibly email report for keywords found?

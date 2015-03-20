@@ -26,26 +26,21 @@ body{
     display: inline;
     color: black;
 }
-
-#hlY {
+#hll {
     position:absolute;
     left:0;
     right:0;
+}
+
+.hlY {
     background: rgba(255,230,0,0.5);
     border-radius: 3px;
 }
-#hlR {
-    position:absolute;
-    left:0;
-    right:0;
+.hlR {
     background: rgba(255,30,0,0.5);
     border-radius: 3px;
 }
-#hlG {
-	position:absolute;
-	left:0;
-	right:0;
-	width: 100%;
+.hlG {
     background: rgba(0,255,30,0.5);
     border-radius: 3px;
 }
