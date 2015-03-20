@@ -66,7 +66,7 @@ if (isset($_GET['ajax'])) {
 
 	if(!file_exists($fname) || !is_readable($fname)) {
 		if(empty($_SESSION['error'])){
-			echo '<br><span id="hll" class="hlR">['.date('r')."]  Failed to read file - $fname</span>";
+			echo '<br><br><span id="hll" class="hlR">['.date('r')."]  Failed to read file - $fname</span>";
 			$_SESSION['error'] = 1;
 		}
 		exit;
@@ -79,7 +79,7 @@ if (isset($_GET['ajax'])) {
 
 	if(isset($_SESSION['offset'])){
 		if($_SESSION['offset'] > $fsize){
-            echo '<br><span id="hll" class="hlY">['.date('r')."]  File Truncated - $fname</span>";
+            echo '<br><br><span id="hll" class="hlY">['.date('r')."]  File Truncated - $fname</span>";
 			$_SESSION['offset'] = 0;
 		}
 		if($_SESSION['offset'] < $fsize) {
@@ -88,7 +88,7 @@ if (isset($_GET['ajax'])) {
 			$_SESSION['offset'] = ftell($handle);
 		}
 	}else{
-        echo '<br><span id="hll" class="hlG">['.date('r')."]  Starting tail - $fname</span>";
+        echo '<br><br><span id="hll" class="hlG">['.date('r')."]  Starting tail - $fname</span>";
 		fseek($handle, 0, SEEK_END);
 		$_SESSION['offset'] = ftell($handle);
 	}
