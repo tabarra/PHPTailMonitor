@@ -1,47 +1,177 @@
+/**
+ *  web fonts
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+/**
+ *  Content Definitions
+ */
 body{
-	background-color: black;
+	background-color: #191919;
 	color: white;
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 16px;
 	line-height: 20px;
 }
-#tailLog {
+#container-content{
+    margin-top: 70px;
 	width: 100%;
-	padding-top: 34px;
+    line-height: 1.4;
 }
-
-.menu {
-	width: 100%;
+#navbar-container{
     position: fixed;
     top: 0;
-    left:0;
-    right:0;
-    bottom: auto;
-    background-color: #cccccc;
-    height: 35px;
-    z-index: 999;
-}
-.menu h3{
-    display: inline;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
     color: black;
+    height: 30px;
+    padding: 15px;
+    /*overflow: hidden;*/
 }
-#hll {
+#navbar-left-list{
+    float: left;
+    margin: 0;
+}
+#navbar-right-list{
+    float: right;
+    margin: 0 30px 0 0;
+}
+.navbar-list{
+    padding: 0;
+}
+.navbar-item{
+    display: inline;
+}
+.navbar-title{
+    margin-right: 20px;
+    color: #191919;
+}
+.nav-button{
+    display: inline-block;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    padding: 5px 20px;
+    border: 1px solid rgba(0,0,0,0.3);
+    background-color: #CCC;
+    border-color: rgba(0,0,0,0.9);
+}
+.nav-button-blue{
+    background-color: #4F87A2;
+    border-color: rgba(0,0,0,0.5);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+    color: #FFF;
+}
+.nav-button-blue:hover{
+    background-color: #699DB6;
+    border-color: rgba(0,0,0,0.3);
+}
+.nav-button-red{
+    background-color: #DA4F49;
+    border-color: rgba(0,0,0,0.5);
+    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+    color: #FFF;
+}
+.nav-button-red:hover{
+    background-color: #E48681;
+    border-color: rgba(0,0,0,0.3);
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+h3{
+    display: inline;
+    margin: 0;
+}
+.hll {
     position:absolute;
     left:0;
     right:0;
     width: 100%;
 }
 
-.hlY {
-    background: rgba(255,230,0,0.5);
-    border-radius: 3px;
+/**
+ *  Highlight colors
+ */
+
+ .hl{
+    padding: 1px 3px 1px 3px;
+ }
+
+/* light red */
+.hl-red{
+    background: #ff5e5e;    
 }
-.hlR {
-    background: rgba(255,30,0,0.5);
-    border-radius: 3px;
+.hl-red-font{
+    color: #ff5e5e;
 }
-.hlG {
-    background: rgba(0,255,30,0.5);
-    border-radius: 3px;
+/* dark red */
+.hl-ded{
+    background: #da4453;
+}
+.hl-ded-font{
+    color: #da4453;
+}
+/* light blue */
+.hl-ble{
+    background: #8cdaff;
+}
+.hl-ble-font{
+    color: #8cdaff;
+}
+/* dark blue */
+.hl-dbl{
+    background: #6699cc;
+}
+.hl-dbl-font{
+    color: #6699cc;
+}
+/* light orange */
+.hl-oge{
+    background: #fc9354;
+}
+.hl-oge-font{
+    color: #fc9354;
+}
+/* dark orange */
+.hl-ogg{
+    background: #fc6d58;
+}
+.hl-ogg-font{
+    color: #fc6d58;
+}
+/* purple */
+.hl-ppl{
+    background: #AD93E6;
+}
+.hl-ppl-font{
+    color: #AD93E6;
+}
+/* green */
+.hl-grn{
+    background: #8BC163;
+}
+.hl-grn-font{
+    color: #8BC163;
+}
+/* pink */
+.hl-lpk{
+    background: #d870a9;
+}
+.hl-lpk-font{
+    color: #d870a9;
+}
+/* yellow */
+.hl-ylw{
+    background: #FAB85A;
+}
+.hl-ylw-font{
+    color: #FAB85A;
 }
