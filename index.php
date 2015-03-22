@@ -9,6 +9,7 @@
     <link href="res/style.css" rel="stylesheet" type="text/css">
     <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
     <script src="res/jquery-timing.min.js"></script>
+    <script src="res/functions.js"></script>
 </head>
 <body>
 	<div id="navbar-container">
